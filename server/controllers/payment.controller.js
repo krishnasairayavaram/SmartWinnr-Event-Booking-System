@@ -27,13 +27,14 @@ export const createCheckoutSession = async (req, res) => {
                 },
             ],
             mode: "payment",
-            success_url: `http://localhost:5173/success?eventId=${event._id}&seats=${seatsBooked}`,
-            cancel_url: `http://localhost:5173/`,
+            // UPDATED FOR PRODUCTION
+            success_url: `https://smart-winnr-event-booking-system.vercel.app/success?eventId=${event._id}&seats=${seatsBooked}`,
+            cancel_url: `https://smart-winnr-event-booking-system.vercel.app/`,
         });
 
         res.json({ url: session.url });
     } catch (error) {
-        console.error("Stripe Error:", error.message);
-        res.status(500).json({ message: "Stripe Session Failed", error: error.message });
+        // Removed console.log for production
+        res.status(500).json({ message: "Stripe Session Failed" });
     }
 };
