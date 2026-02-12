@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import axios from "axios";
+import API from "../api/axios";
 
 const Success = () => {
   const [searchParams] = useSearchParams();
@@ -15,8 +15,7 @@ const Success = () => {
         hasBooked.current = true; 
         try {
           const token = localStorage.getItem("token");
-          await axios.post(
-            "http://localhost:5000/api/event/bookings",
+          await API.post("/event/bookings",
             { eventId, seatsBooked: Number(seatsBooked) },
             { headers: { Authorization: `Bearer ${token}` } }
           );
