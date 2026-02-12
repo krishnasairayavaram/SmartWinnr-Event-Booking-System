@@ -34,3 +34,23 @@ npm run dev
 2.Stripe integration for ticket purchases.(Used test keys jst for displaying)
 3.Able to upload event posters via Cloudinary.
 4.Session persistence with JWT.
+
+
+### SCREENSHOTS
+
+#### Home Page
+![Home Page](./images/HOME.png)
+
+#### Login & Register
+![Login](./images/login.png)
+![Register](./images/register.png)
+
+#### Event Management
+![Add Event](./images/addevent.png)
+
+#### Booking History
+![Booking History](./images/bookinghistory.png)
+
+#### Payment & Success
+![Payment](./images/payment.png)
+![Payment Success](./images/paymentsuccess.png)
