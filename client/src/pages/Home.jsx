@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from "../api/axios";
 import { AuthContext } from "../context/AuthContext";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/event/events");
+      const res = await API.get("/event/events");
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events");
@@ -30,8 +30,7 @@ const Home = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post(
-        "http://localhost:5000/api/payment/create-checkout",
+      const res = await API.post("/payment/create-checkout",
         { event: selectedEvent, seatsBooked: Number(numSeats) },
         { headers: { Authorization: `Bearer ${token}` } }
       );
