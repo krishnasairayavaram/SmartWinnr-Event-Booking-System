@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import API from "../api/axios";
 import { AuthContext } from "../context/AuthContext";
 
 const Bookings = () => {
@@ -15,7 +15,7 @@ const Bookings = () => {
     const fetchHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/event/my-bookings", {
+        const res = await API.get("/event/my-bookings", {
           headers: { Authorization: `Bearer ${token}` }
         });
         
