@@ -16,8 +16,7 @@ const Success = () => {
         try {
           const token = localStorage.getItem("token");
           await API.post("/event/bookings",
-            { eventId, seatsBooked: Number(seatsBooked) },
-            { headers: { Authorization: `Bearer ${token}` } }
+            { eventId, seatsBooked: Number(seatsBooked) }
           );
           setStatus("success");
         } catch (err) {
