@@ -1,4 +1,4 @@
-                            SMARTWINNR Event Booking System
+SMARTWINNR Event Booking System
                                     TECH: MERN STACK
 Frontend: React.js (Vite)
 Backend: Node.js, Express.js
