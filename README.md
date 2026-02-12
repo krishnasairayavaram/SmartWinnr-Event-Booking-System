@@ -36,21 +36,3 @@ npm run dev
 4.Session persistence with JWT.
 
 
-### SCREENSHOTS
-
-#### Home Page
-![Home Page](images/HOME.png)
-
-#### Login & Register
-![Login](images/login.png)
-![Register](images/register.png)
-
-#### Event Management
-![Add Event](images/addevent.png)
-
-#### Booking History
-![Booking History](images/bookinghistory.png)
-
-#### Payment & Success
-![Payment](images/payment.png)
-![Payment Success](images/paymentsuccess.png)
