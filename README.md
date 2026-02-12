@@ -39,18 +39,18 @@ npm run dev
 ### SCREENSHOTS
 
 #### Home Page
-![Home Page](./images/HOME.png)
+![Home Page](images/HOME.png)
 
 #### Login & Register
-![Login](./images/login.png)
-![Register](./images/register.png)
+![Login](images/login.png)
+![Register](images/register.png)
 
 #### Event Management
-![Add Event](./images/addevent.png)
+![Add Event](images/addevent.png)
 
 #### Booking History
-![Booking History](./images/bookinghistory.png)
+![Booking History](images/bookinghistory.png)
 
 #### Payment & Success
-![Payment](./images/payment.png)
-![Payment Success](./images/paymentsuccess.png)
+![Payment](images/payment.png)
+![Payment Success](images/paymentsuccess.png)
