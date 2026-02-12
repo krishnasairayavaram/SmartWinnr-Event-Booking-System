@@ -10,7 +10,13 @@ import paymentRoutes from "./routes/payment.routes.js";
 
 const app=express();
 app.use(express.json());
-app.use(cors({ origin: "https://smart-winnr-event-booking-system.vercel.app" }));
+app.use(cors({ 
+  origin: [
+    "https://smart-winnr-event-booking-system.vercel.app",
+    "https://smart-winnr-event-boo-git-2aac8c-krishna-sais-projects-e88889b1.vercel.app"
+  ],
+  credentials: true 
+}));
 const MONGO_URL=process.env.MONGO_URL;
 const connectDB=async()=>{
     try{
